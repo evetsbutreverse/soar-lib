@@ -13,6 +13,12 @@ app.get('/', (req, res) => {
    app.get('/me/eldodebug/soar/7.1.2/soar-7.1.2.jar', (req, res) => {
      res.redirect('https://github.com/Soar-Client/Legacy-SoarClient/releases/download/v7.1.2/SoarClient.jar')
    });
+   app.get('/lwjgl-natives/', (req, res) => {
+    res.sendFile(path.join(__dirname, './', 'lwjgl-soar-natives.jar')); 
+  });
+  app.get('/lwjgl/', (req, res) => {
+    res.sendFile(path.join(__dirname, './', 'lwjgl-soar.jar')); 
+  });
 
 app.listen(3000, () => console.log("Server ready on port 3000."));
 
